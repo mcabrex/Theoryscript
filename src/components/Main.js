@@ -4,7 +4,7 @@ import {
     keyDropDown,
     modeDropDown,
     scaleMaker
-} from '../helper'
+} from '../helper/builders'
 
 export default class Blank extends Component {
   constructor(props){
@@ -45,6 +45,7 @@ export default class Blank extends Component {
     }
     
     componentDidMount(){
+
         let mode = this.state.mode
         let key = this.state.key
         let scale = scaleMaker(mode,key)

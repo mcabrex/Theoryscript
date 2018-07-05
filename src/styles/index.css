@@ -1,0 +1,17 @@
+.scales {
+  color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center; }
+  .scales-note {
+    width: 12.5vw;
+    margin: 2.5vh 0; }
+
+.mode {
+  margin-top: 20vh; }
+
+body {
+  font-family: sans-serif;
+  text-align: center; }

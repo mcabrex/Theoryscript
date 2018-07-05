@@ -1,0 +1,12 @@
+.scales {
+    color: green;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    &-note {
+        width: 100vw * (1/8);
+        margin: 2.5vh 0;
+    }
+}

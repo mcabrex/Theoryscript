@@ -33,11 +33,80 @@ export function perfectFifth(note){
 }
 
 export function majorTriadChord(note){
-    let chord = []
     let third = majorThird(note)
     let fifth = perfectFifth(note)
+    let chord = []
     chord.push(note,third,fifth)
     return chord
 }
 
+export function minorTriadChord(note){
+    let third = minorThird(note)
+    let fifth = perfectFifth(note)
+    let chord = []
+    chord.push(note,third,fifth)
+    return chord
+}
 
+export function diminishedTriadChord(note){
+    let third = minorThird(note)
+    let fifth = minorThird(third)
+    let chord = []
+    chord.push(note,third,fifth)
+    return chord
+}
+
+export function augmentedTriadChord(note){
+    let third = majorThird(note)
+    let fifth = majorThird(third)
+    let chord = []
+    chord.push(note,third,fifth)
+    return chord
+}
+
+export function triadType(chord){
+    let root = chord[0]
+    const types = {
+        'Major' : majorTriadChord(root),
+        'Minor' : minorTriadChord(root),
+        'Diminished' : diminishedTriadChord(root),
+        'Augmented' : augmentedTriadChord(root)
+    }
+    for(triadType in types){
+        if(types[triadType].toString() === chord.toString()) return triadType
+    }
+
+    return 'Unkown Chord'
+}
+
+//roman numeral analysis 
+export  function romanNumeralAnalysis(chordArr,key){
+    let romanNumerals = ['I','II','III','IV','V','VI','VII','I']
+    let scale = ['C','D','E','F','G','A','B']
+    let root = chordArr[0]
+
+    let keyPosition = scale.indexOf(key)
+    let chordPosition = scale.indexOf(root)
+    let numeralIndex = keyPosition <= chordPosition ? chordPosition-keyPosition : (chordPosition+7) - keyPosition
+    let romanNumeral = romanNumerals[numeralIndex]
+
+    let type = triadType(chordArr)
+    switch(type){
+      case 'Major':
+        return romanNumeral.toUpperCase()
+        break
+      case 'Minor':
+        return romanNumeral.toLowerCase()
+        break  
+      case 'Diminished':
+        romanNumeral=romanNumeral.toLowerCase()
+        return romanNumeral +=`\xB0`
+        break
+      case 'Augmented':
+        romanNumeral=romanNumeral.toUpperCase()
+        return romanNumeral +='+'
+        break
+      default :
+        return 'Unknown chord or key'
+    }
+}

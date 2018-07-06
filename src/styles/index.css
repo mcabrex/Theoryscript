@@ -10,7 +10,10 @@
     margin: 2.5vh 0; }
 
 .mode {
-  margin-top: 20vh; }
+  margin-top: 10vh; }
+
+.title {
+  margin-top: 5vh; }
 
 body {
   font-family: sans-serif;

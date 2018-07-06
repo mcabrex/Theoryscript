@@ -57,7 +57,6 @@ export default class Blank extends Component {
     handleKey(e){
         let oldKey = this.state.key[0]
         let target = e.target.id
-        console.log('target',target)
         let newKey = target === 'b' || target === '#' || target === '' ? oldKey+=target : target
         let mode = this.state.mode
         let scale = scaleMaker(mode,newKey)
@@ -97,6 +96,7 @@ export default class Blank extends Component {
         let state = this.state
         return (
             <div>
+                <h1 className="title">T H E O R Y S C R I P T</h1>
                 <div className="mode">
                     mode:
                     <select onChange={this.handleMode}>

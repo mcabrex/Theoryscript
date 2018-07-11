@@ -3,8 +3,10 @@ import {
     scaleBuilder,
     keyDropDown,
     modeDropDown,
+} from '../helper/builders';
+import {
     scaleMaker
-} from '../helper/builders'
+} from '../helper/functions'
 
 export default class Blank extends Component {
   constructor(props){
@@ -96,7 +98,7 @@ export default class Blank extends Component {
         let state = this.state
         return (
             <div>
-                <h1 className="title">T H E O R Y S C R I P T</h1>
+                <h1 className="title">T H E O R Y - S C R I P T</h1>
                 <div className="mode">
                     mode:
                     <select onChange={this.handleMode}>

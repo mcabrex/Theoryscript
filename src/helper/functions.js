@@ -20,63 +20,85 @@ export function nextSemitones(note,numOfSemitones){
     return nextNote+=newAccidental
 }
 
-export function majorThird(note){
-    return nextSemitones(nextSemitones(note,2),2)
-}
-  
-export function minorThird(note){
-      return nextSemitones(nextSemitones(note,2),1)
-}
-
-export function perfectFifth(note){
-    return minorThird(majorThird(note))
-}
-
-export function majorTriadChord(note){
-    let third = majorThird(note)
-    let fifth = perfectFifth(note)
-    let chord = []
-    chord.push(note,third,fifth)
-    return chord
-}
-
-export function minorTriadChord(note){
-    let third = minorThird(note)
-    let fifth = perfectFifth(note)
-    let chord = []
-    chord.push(note,third,fifth)
-    return chord
+export function scaleMaker(mode,key){
+    let modes = {
+        'Ionian' : [3,7],
+        'Dorian' : [2,6],
+        'Phrygian' : [1,5],
+        'Lydian' : [4,7],
+        'Mixolydian' : [3,6],
+        'Aeolian' : [2,5],
+        'Locrian' : [1,4]
+    }
+    let scale = []
+    scale.push(key)
+    for(let i = 1; i < 8; i++){
+        if(i === modes[mode][0] || i === modes[mode][1]){
+            scale.push(nextSemitones(scale[i-1],1))
+        } else {
+            scale.push(nextSemitones(scale[i-1],2))
+        }
+    }
+    return scale
 }
 
-export function diminishedTriadChord(note){
-    let third = minorThird(note)
-    let fifth = minorThird(third)
-    let chord = []
-    chord.push(note,third,fifth)
-    return chord
+export function intervalCalculator(note,interval){
+  let intervalSetA = ['d','m','M','A']
+  let intervalSetB = ['d','P','A']
+  let perfectIntervals = [4,5,8]
+  let semitones = perfectIntervals.includes(+interval[1]) ? intervalSetB.indexOf(interval[0]) : intervalSetA.indexOf(interval[0])
+  let nextNote = note
+
+  for(let i = 0; i < +interval[1]-1; i++){
+    if(i === +interval[1]-2){
+      return +interval[1] === 5 ? nextSemitones(nextNote,semitones+1) : nextSemitones(nextNote,semitones)
+    }
+    nextNote = i === 2 || i === 6 ? nextSemitones(nextNote,1) : nextSemitones(nextNote,2)
+  }
 }
 
-export function augmentedTriadChord(note){
-    let third = majorThird(note)
-    let fifth = majorThird(third)
-    let chord = []
-    chord.push(note,third,fifth)
-    return chord
+export function triadMaker(root,quality){
+  let qualities = {
+    'Diminished': ['m','d'],
+    'Minor': ['m','P'],
+    'Major': ['M','P'],
+    'Augmented' : ['M','A']
+  }
+  let chord = []
+  let third = intervalCalculator(root,qualities[quality][0]+3)
+  let fifth = intervalCalculator(root,qualities[quality][1]+5)
+  chord.push(root,third,fifth)
+  return chord
 }
 
-export function triadType(chord){
+export function triadCalculator(chord){
     let root = chord[0]
-    const types = {
-        'Major' : majorTriadChord(root),
-        'Minor' : minorTriadChord(root),
-        'Diminished' : diminishedTriadChord(root),
-        'Augmented' : augmentedTriadChord(root)
+    const types = [
+        'Major',
+        'Minor',
+        'Diminished',
+        'Augmented'
+    ]
+    for(let i = 0; i < types.length; i++){
+      let chordType = types[i]
+      console.log(triadMaker(root,chordType),chord)
+      if(triadMaker(root,chordType).toString() === chord.toString()) return chordType
     }
-    for(triadType in types){
-        if(types[triadType].toString() === chord.toString()) return triadType
-    }
-
     return 'Unkown Chord'
+}
+
+
+export function scaleChords(scale){
+    let chords = []
+    for(let i = 0; i < scale.length; i++){
+      chords.push([
+        scale[i],
+        scale[(i+2)%scale.length],
+        scale[(i+4)%scale.length]
+      ])
+    }
+    chords.push(chords[0])
+    return chords
 }
 
 //roman numeral analysis 
@@ -90,22 +112,19 @@ export  function romanNumeralAnalysis(chordArr,key){
     let numeralIndex = keyPosition <= chordPosition ? chordPosition-keyPosition : (chordPosition+7) - keyPosition
     let romanNumeral = romanNumerals[numeralIndex]
 
-    let type = triadType(chordArr)
+    let type = triadCalculator(chordArr)
+    
     switch(type){
       case 'Major':
         return romanNumeral.toUpperCase()
-        break
       case 'Minor':
         return romanNumeral.toLowerCase()
-        break  
       case 'Diminished':
         romanNumeral=romanNumeral.toLowerCase()
         return romanNumeral +=`\xB0`
-        break
       case 'Augmented':
         romanNumeral=romanNumeral.toUpperCase()
         return romanNumeral +='+'
-        break
       default :
         return 'Unknown chord or key'
     }

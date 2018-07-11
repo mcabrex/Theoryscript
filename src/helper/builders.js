@@ -1,9 +1,5 @@
 import React from 'react'
 
-import {
-    nextSemitones,
-} from './functions'
-
 export function scaleBuilder(scale){
     let div = []
     for(let i = 0; i < scale.length; i++){
@@ -56,24 +52,3 @@ export function modeDropDown(modes){
     return div
 }
 
-export function scaleMaker(mode,key){
-    let modes = {
-        'Ionian' : [3,7],
-        'Dorian' : [2,6],
-        'Phrygian' : [1,5],
-        'Lydian' : [4,7],
-        'Mixolydian' : [3,6],
-        'Aeolian' : [2,5],
-        'Locrian' : [1,4]
-    }
-    let scale = []
-    scale.push(key)
-    for(let i = 1; i < 8; i++){
-        if(i === modes[mode][0] || i === modes[mode][1]){
-            scale.push(nextSemitones(scale[i-1],1))
-        } else {
-            scale.push(nextSemitones(scale[i-1],2))
-        }
-    }
-    return scale
-}

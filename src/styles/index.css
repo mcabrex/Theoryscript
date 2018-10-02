@@ -13,7 +13,11 @@
   margin-top: 10vh; }
 
 .title {
-  margin-top: 5vh; }
+  margin-top: 5vh;
+  text-decoration: none; }
+
+.function-name {
+  margin-left: 0; }
 
 body {
   font-family: sans-serif;

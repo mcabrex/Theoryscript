@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-    SemitonalDistance,
-    ScaleMaker,
-    NextSemitone,
-    DiatonicNumberCalculator,
-    Gaggablog
-} from './functions'
-
-
+import Functions from './Functions'
 
 export default class ScriptPage extends Component {
     render() {
@@ -15,11 +7,7 @@ export default class ScriptPage extends Component {
             <div>
                 <h2 className="">Javascript</h2>
                 <div className="text-left">
-                    <SemitonalDistance />
-                    <DiatonicNumberCalculator />
-                    <NextSemitone />
-                    <ScaleMaker />
-                    <Gaggablog />
+                    <Functions />
                 </div>
             </div>
         );

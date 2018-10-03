@@ -1,8 +1,14 @@
 .navbar {
-    background-color: rgba(255, 255, 77, 0.939);
+    background-color: rgb(0, 0, 0);
     height: 10vh;
     &-text {
         width: 100vw;
         text-align: center;
+        &-link {
+            color: white;
+            &:hover {
+                color: white;
+            }
+        }
     }
 }

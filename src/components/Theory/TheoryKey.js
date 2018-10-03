@@ -25,14 +25,14 @@ function TheoryKey(props) {
               aria-label="Basic example"
             >
               <button id="b" type="button" className={accidentalClassFlat}>
-                {"b"}
+                {"♭"}
               </button>
               <button id="#" type="button" className={accidentalClassSharp}>
-                {"#"}
+                {"♯"}
               </button>
             </div>
             <br />
-            <div>Key: {key}</div>
+            <div className="key-title">Key: {key}</div>
           </div>
         )
       }

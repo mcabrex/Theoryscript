@@ -10,10 +10,10 @@ export default function functionComponent(
   for (const functions in functionNames) {
     div.push(
       <dl className="" {...props} key={functions} >
-        <dt className="col-sm-3">{functionNames[functions]}</dt>
+        <dt className="col-sm-3 function-name">{functionNames[functions]}</dt>
         <div className="col-sm-9">
-          <dd className="text-left">{functionDescriptions[functions]}</dd>
-          <pre className="text-left">
+          <dd className="text-left function-description">{functionDescriptions[functions]}</dd>
+          <pre className="text-left function-string">
             <code>{functionStrings[functions]}</code>
           </pre>
         </div>

@@ -1,12 +1,14 @@
 .scales {
-    color: green;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     position: relative;
-    width: 100vw;
+    width: 90vw;
     &-note {
         width: 80vw * (1/8);
         margin: 2.5vh 0;

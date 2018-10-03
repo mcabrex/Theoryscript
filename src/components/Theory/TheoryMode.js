@@ -8,8 +8,8 @@ function TheoryMode(props) {
     <TheoryContext.Consumer>
       {({ handleMode, modes, mode }) => (
         <div className="mode">
-          mode:
-          <select {...props} value={mode} onChange={handleMode} className="">{modeDropDown(modes)}</select>
+          MODE: 
+          <select {...props} value={mode} onChange={handleMode} className="mode-select">{modeDropDown(modes)}</select>
         </div>
       )}
     </TheoryContext.Consumer>

@@ -1,3 +1,13 @@
 .mode {
+    margin: 0 auto;
     margin-top: 10vh;
+    background-color: black;
+    color: white;
+    width: 80vw;
+    height: 10vh;
+    padding: 3vh;
+    &-select {
+        width: 20vw;
+        text-align: center;
+    }
 }

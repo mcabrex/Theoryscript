@@ -7,7 +7,7 @@ const Script = () => {
     <div>
       <ScriptProvider>
         <ScriptContext>
-          {value => <ScriptPage {...value} />}
+          {value => <ScriptPage {...value}  />}
         </ScriptContext>
       </ScriptProvider>
     </div>

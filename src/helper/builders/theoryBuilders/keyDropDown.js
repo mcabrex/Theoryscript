@@ -1,20 +1,22 @@
-import React from 'react'
+import React from "react";
 
-export default function keyDropDown(keys) {
-    let div = [];
-    for (let i = 0; i < keys.length; i++) {
-      let key = keys[i];
+export default function keyDropDown(keys, key, handleKey) {
+  let div = [];
+  for (let i = 0; i < keys.length; i++) {
+    let currentKey = keys[i];
+    let keyClass = currentKey === key[0] ? "key-pressed" : "key"
       div.push(
         <button
-          key={`key${key}`}
-          id={key}
+          onClick={handleKey}
+          key={`key${currentKey}`}
+          id={currentKey}
           name="key"
           type="button"
-          className="btn btn-secondary"
+          className={keyClass}
         >
-          {key}
+          {currentKey}
         </button>
       );
-    }
-    return div;
   }
+  return div;
+}

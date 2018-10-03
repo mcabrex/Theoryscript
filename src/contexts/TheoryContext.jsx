@@ -21,7 +21,6 @@ export class TheoryProvider extends React.Component {
       scale,
       triads
     });
-    console.log(this.state.mode);
   };
 
   handleKey = e => {
@@ -34,12 +33,10 @@ export class TheoryProvider extends React.Component {
     let mode = this.state.mode;
     let scale = scaleMaker(mode, newKey);
     let triads = scaleChords(scale);
-    console.log(this.state.mode);
-
     this.setState({
       key: newKey,
       scale,
-      triads
+      triads,
     });
     //when key is changed, state.scale is changed
   };

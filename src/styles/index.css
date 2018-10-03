@@ -1,24 +1,7 @@
-.scales {
-  color: green;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center; }
-  .scales-note {
-    width: 12.5vw;
-    margin: 2.5vh 0; }
-
-.mode {
-  margin-top: 10vh; }
-
-.title {
-  margin-top: 5vh;
-  text-decoration: none; }
-
-.function-name {
-  margin-left: 0; }
-
+@import url(./scssFiles/theory/index.css);
+@import url(./scssFiles/script/index.css);
+@import url(./navbar.css);
 body {
   font-family: sans-serif;
-  text-align: center; }
+  text-align: center;
+  height: 80vh; }

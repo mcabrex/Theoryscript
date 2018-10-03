@@ -4,7 +4,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  width: 100vw; }
   .scales-note {
-    width: 12.5vw;
+    width: 10vw;
     margin: 2.5vh 0; }

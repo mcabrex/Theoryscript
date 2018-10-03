@@ -1,0 +1,52 @@
+.scales {
+  color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100vw; }
+  .scales-note {
+    width: 10vw;
+    margin: 2.5vh 0; }
+
+.mode {
+  margin-top: 10vh; }
+
+.key {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  height: 4vw;
+  width: 4vw;
+  background-color: rgba(0, 128, 0, 0);
+  color: white;
+  border-color: white;
+  border-style: solid;
+  border-radius: 0.5vw; }
+  .key:hover {
+    background-color: aqua; }
+  .key-pressed {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: 4vw;
+    width: 4vw;
+    background-color: rgba(0, 128, 0, 0);
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 0.5vw;
+    border-color: aqua; }
+
+.accidental {
+  background-color: #f7ffff; }
+  .accidental-pressed {
+    background-color: aqua; }
+
+.theory {
+  background-color: #fa4a96;
+  height: 90vh; }

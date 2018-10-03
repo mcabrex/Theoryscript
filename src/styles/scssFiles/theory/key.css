@@ -1,0 +1,27 @@
+.key {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  height: 4vw;
+  width: 4vw;
+  background-color: rgba(0, 128, 0, 0);
+  color: white;
+  border-color: white;
+  border-style: solid;
+  border-radius: 0.5vw; }
+  .key:hover {
+    background-color: aqua; }
+  .key-pressed {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: 4vw;
+    width: 4vw;
+    background-color: rgba(0, 128, 0, 0);
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 0.5vw;
+    border-color: aqua; }

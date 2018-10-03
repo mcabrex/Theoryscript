@@ -5,8 +5,10 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    position: relative;
+    width: 100vw;
     &-note {
-        width: 100vw * (1/8);
+        width: 80vw * (1/8);
         margin: 2.5vh 0;
     }
 }

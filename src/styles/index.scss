@@ -1,9 +1,9 @@
-@import './scssFiles/scales.scss';
-@import './scssFiles/mode.scss';
-@import './scssFiles/title.scss';
-@import './functionStyles/functionName.scss';
+@import './scssFiles/theory/index.css';
+@import './scssFiles/script/index.css';
+@import './navbar.css';
 
 body {
     font-family: sans-serif;
     text-align: center;
+    height: 80vh;
 }

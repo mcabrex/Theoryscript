@@ -9,7 +9,7 @@ function TheoryMode(props) {
       {({ handleMode, modes, mode }) => (
         <div className="mode">
           mode:
-          <select {...props} value={mode} onChange={handleMode}>{modeDropDown(modes)}</select>
+          <select {...props} value={mode} onChange={handleMode} className="">{modeDropDown(modes)}</select>
         </div>
       )}
     </TheoryContext.Consumer>

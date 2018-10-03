@@ -5,7 +5,7 @@ export default class ScriptPage extends Component {
     render() {
         return (
             <div className="script">
-                <h2 className="">Javascript</h2>
+                <h2 className="script-language">Javascript</h2>
                 <div className="text-left">
                     <Functions />
                 </div>

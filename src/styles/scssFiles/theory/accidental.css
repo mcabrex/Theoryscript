@@ -1,8 +1,6 @@
+.accidental:hover, .accidental-pressed {
+  background-color: black;
+  color: #fdfcf4; }
+
 .accidental {
   background-color: rgba(0, 0, 0, 0); }
-  .accidental:hover {
-    background-color: black;
-    color: white; }
-  .accidental-pressed {
-    background-color: black;
-    color: white; }

@@ -1,11 +1,11 @@
+@import '../../mixins';
+
 .accidental {
     background-color: rgba(0, 0, 0, 0);
     &:hover {
-        background-color: black;
-        color: white;
+        @extend %title-block;
     }
     &-pressed {
-        background-color: black;
-        color: white;
+        @extend %title-block;
     }
 }

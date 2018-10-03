@@ -1,7 +1,8 @@
+@import '../../mixins';
+
 .scales {
     margin: 0 auto;
-    background-color: black;
-    color: white;
+    @extend %title-block;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -1,7 +1,9 @@
 .scales {
-  margin: 0 auto;
   background-color: black;
-  color: white;
+  color: #fdfcf4; }
+
+.scales {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

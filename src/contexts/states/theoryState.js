@@ -12,7 +12,6 @@ let theoryState = {
   keys: ["C", "D", "E", "F", "G", "A", "B"],
   key: "C",
   accidental: false,
-  sharps: ["F#", "C#", "G#", "D#", "A#", "E#", "B#"],
   scale: ["C", "D", "E", "F", "G", "A", "B", "C"],
   triads: [],
   degreeNumerals: ["I", "II", "III", "IV", "V", "VI", "VII", "I"],

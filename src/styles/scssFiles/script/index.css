@@ -1,13 +1,22 @@
-.function-name {
-  color: #fd16de; }
+.function-name, .script-language {
+  background-color: black;
+  color: #fdfcf4; }
 
-.function-description {
-  color: yellow; }
+.function {
+  margin-left: 3vw; }
+  .function-name {
+    display: inline-block;
+    text-align: center;
+    padding: 1.5vh; }
 
-.function-string {
-  color: white; }
+.function-name, .script-language {
+  background-color: black;
+  color: #fdfcf4; }
 
 .script {
-  background-color: black;
-  color: white;
   height: 100%; }
+  .script-language {
+    margin: 2vh;
+    display: inline-block;
+    text-align: center;
+    padding: 1.5vh; }

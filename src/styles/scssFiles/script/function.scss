@@ -1,11 +1,17 @@
+@import '../../mixins';
+
 .function {
+    margin-left: 3vw;
     &-name {
-        color: rgb(253, 22, 222);
+        display: inline-block;
+        @extend %title-block;
+        text-align: center;
+        padding: 1.5vh;
     }
     &-description {
-        color: yellow;
+
     }
     &-string {
-        color: white;
+        
     }
 }

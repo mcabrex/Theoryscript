@@ -10,7 +10,7 @@ let nextSemitones = (note,numOfSemitones) => {
     //the distance between B && E to the next note on the scale are the only ones who need only a single semitone 
     let lowerDistance = accidental ? accidental.length*0.5 : 0
     //if there's an accidental the distance between the note will have to be increased or decreased depending on the accidental
-    if(accidental && accidental[0] === '#') lowerDistance*=-1
+    if(accidental && accidental[0] === '♯') lowerDistance*=-1
     //if there's an accidental and it's sharp then the distance between the current note and the next ntoe on the scale will have to be decreased by the amount of accidentals
     let totalDistance = upperDistance + lowerDistance - (0.5*numOfSemitones)
     //the total number of semitones between the current note and the next note up the scale (based on C major)
@@ -18,7 +18,7 @@ let nextSemitones = (note,numOfSemitones) => {
     if(totalDistance === 0) return nextNote
     //always give the next note up the scale
 
-    let accidentalType = totalDistance > 0 ? 'b' : '#'
+    let accidentalType = totalDistance > 0 ? '♭' : '♯'
     //the total distance will determine if the next note should be sharp or flat
     let newAccidental = ''
     

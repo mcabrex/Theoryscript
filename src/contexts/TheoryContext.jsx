@@ -27,7 +27,7 @@ export class TheoryProvider extends React.Component {
     let oldKey = this.state.key[0];
     let target = e.target.id;
     let newKey =
-      target === "b" || target === "#" || target === ""
+      target === "♭" || target === "♯" || target === ""
         ? (oldKey += target)
         : target;
     let mode = this.state.mode;

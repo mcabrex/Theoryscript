@@ -1,7 +1,13 @@
 @import './function.scss';
+@import '../../mixins';
 
 .script {
-    background-color: black;
-    color: white;
     height: 100%;
+    &-language {
+        @extend %title-block;
+        margin: 2vh;
+        display: inline-block;
+        text-align: center;
+        padding: 1.5vh;
+    }
 }

@@ -1,39 +1,32 @@
-.key {
+@import '../../mixins';
+
+%key-scss {
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 3vh;
     margin-bottom: 3vh;
     height: 4vw;
     width: 4vw;
-    background-color: rgba(0, 128, 0, 0);
+    background-color: white;
     color: black;
     border-color: black;
     border-style: solid;
     border-radius: 0.5vw;
+}
+
+.key {
+    @extend %key-scss;
     &:hover {
-        border-color: aqua;
+        border-color: $off-color;
     }
     &-pressed {
-        margin-left: 3vw;
-        margin-right: 3vw;
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-        height: 4vw;
-        width: 4vw;
-        background-color: rgba(0, 128, 0, 0);
-        color: black;
-        border-color: black;
-        border-style: solid;
-        border-radius: 0.5vw;
-        border-color: aqua;
+        @extend %key-scss;
+        border-color: $off-color;
     }
     &-title {
+        @extend %title-block;
+        @include dimensions(30vw,6vh,1vh);
         margin: 0 auto;
-        background-color: black;
-        color: white;
-        width: 30vw;
-        height: 6vh;
         text-align: center;
-        padding: 1.5vh;
     }
 }

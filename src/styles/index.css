@@ -2,6 +2,7 @@
 @import url(./scssFiles/script/index.css);
 @import url(./navbar.css);
 body {
+  background-color: #fdfada;
   font-family: sans-serif;
   text-align: center;
   height: 80vh; }

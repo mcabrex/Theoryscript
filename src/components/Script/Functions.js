@@ -8,7 +8,7 @@ function Functions(props) {
     <ScriptContext.Consumer>
       {({ functionStrings, functionNames, functionDescriptions }) => {
        return (
-         <div>
+         <div className="function">
            {functionComponent(props,functionStrings,functionNames,functionDescriptions)}
          </div>
       )

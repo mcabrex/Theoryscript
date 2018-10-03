@@ -5,6 +5,7 @@
     width: 100vw;
     text-align: center; }
     .navbar-text-link {
-      color: white; }
+      color: #faf8e2; }
       .navbar-text-link:hover {
-        color: white; }
+        color: #00aeae;
+        text-decoration: none; }

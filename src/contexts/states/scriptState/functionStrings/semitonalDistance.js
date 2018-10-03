@@ -14,10 +14,10 @@ function semitonalDistance(note1, note2){
         else semitones += 1;
     }
     
-    if (note1[1] === "#") semitones -= (note1.length - 1) * 0.5;
+    if (note1[1] === "♯") semitones -= (note1.length - 1) * 0.5;
     else semitones += (note1.length - 1) * 0.5;
     
-    if (note2[1] === "#") semitones += (note2.length - 1) * 0.5;
+    if (note2[1] === "♯") semitones += (note2.length - 1) * 0.5;
     else semitones -= (note2.length - 1) * 0.5;
     
     return Math.abs(semitones);

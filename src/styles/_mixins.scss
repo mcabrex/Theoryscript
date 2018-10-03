@@ -1,0 +1,12 @@
+%title-block {
+    background-color: black;
+    color: rgb(253, 252, 244);
+}
+
+@mixin dimensions($width,$height,$padding){
+    width: $width;
+    height: $height;
+    padding: $padding;
+}
+
+$off-color: rgb(0, 174, 174);

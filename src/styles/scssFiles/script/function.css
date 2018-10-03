@@ -1,8 +1,10 @@
 .function-name {
-  color: #fd16de; }
+  background-color: black;
+  color: #fdfcf4; }
 
-.function-description {
-  color: yellow; }
-
-.function-string {
-  color: white; }
+.function {
+  margin-left: 3vw; }
+  .function-name {
+    display: inline-block;
+    text-align: center;
+    padding: 1.5vh; }

@@ -1,7 +1,9 @@
+.scales, .mode, .key-title, .accidental:hover, .accidental-pressed {
+  background-color: black;
+  color: #fdfcf4; }
+
 .scales {
   margin: 0 auto;
-  background-color: black;
-  color: white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,11 +15,13 @@
     width: 10vw;
     margin: 2.5vh 0; }
 
+.scales, .mode, .key-title, .accidental:hover, .accidental-pressed {
+  background-color: black;
+  color: #fdfcf4; }
+
 .mode {
   margin: 0 auto;
   margin-top: 10vh;
-  background-color: black;
-  color: white;
   width: 80vw;
   height: 10vh;
   padding: 3vh; }
@@ -25,50 +29,42 @@
     width: 20vw;
     text-align: center; }
 
-.key {
+.scales, .mode, .key-title, .accidental:hover, .accidental-pressed {
+  background-color: black;
+  color: #fdfcf4; }
+
+.key, .key-pressed {
   margin-left: 3vw;
   margin-right: 3vw;
   margin-top: 3vh;
   margin-bottom: 3vh;
   height: 4vw;
   width: 4vw;
-  background-color: rgba(0, 128, 0, 0);
+  background-color: white;
   color: black;
   border-color: black;
   border-style: solid;
   border-radius: 0.5vw; }
-  .key:hover {
-    border-color: aqua; }
-  .key-pressed {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    height: 4vw;
-    width: 4vw;
-    background-color: rgba(0, 128, 0, 0);
-    color: black;
-    border-color: black;
-    border-style: solid;
-    border-radius: 0.5vw;
-    border-color: aqua; }
-  .key-title {
-    margin: 0 auto;
-    background-color: black;
-    color: white;
-    width: 30vw;
-    height: 6vh;
-    text-align: center;
-    padding: 1.5vh; }
+
+.key:hover {
+  border-color: #00aeae; }
+
+.key-pressed {
+  border-color: #00aeae; }
+
+.key-title {
+  width: 30vw;
+  height: 6vh;
+  padding: 1vh;
+  margin: 0 auto;
+  text-align: center; }
+
+.scales, .mode, .key-title, .accidental:hover, .accidental-pressed {
+  background-color: black;
+  color: #fdfcf4; }
 
 .accidental {
   background-color: rgba(0, 0, 0, 0); }
-  .accidental:hover {
-    background-color: black;
-    color: white; }
-  .accidental-pressed {
-    background-color: black;
-    color: white; }
 
 .theory {
   height: 90vh; }

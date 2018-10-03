@@ -1,3 +1,5 @@
+@import './mixins';
+
 .navbar {
     background-color: rgb(0, 0, 0);
     height: 10vh;
@@ -5,9 +7,10 @@
         width: 100vw;
         text-align: center;
         &-link {
-            color: white;
+            color: rgb(250, 248, 226);
             &:hover {
-                color: white;
+                color: $off-color;
+                text-decoration: none;
             }
         }
     }

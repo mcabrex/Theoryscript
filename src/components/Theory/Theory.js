@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { scaleBuilder } from "../../helper/builders/theoryBuilders/";
+import { scaleBuilder } from "../builders/";
 import { TheoryKey, TheoryMode } from "./index";
 
 export default class TheoryPage extends Component {

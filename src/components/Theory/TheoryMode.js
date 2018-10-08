@@ -1,5 +1,5 @@
 import React from "react";
-import { modeDropDown } from "../../helper/builders";
+import { modeDropDown } from "../builders";
 import { TheoryContext } from "../../contexts/TheoryContext";
 
 function TheoryMode(props) {

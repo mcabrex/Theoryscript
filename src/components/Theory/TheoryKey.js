@@ -1,5 +1,5 @@
 import React from "react";
-import { keyDropDown } from "../../helper/builders";
+import { keyDropDown } from "../builders";
 import { TheoryContext } from "../../contexts/TheoryContext";
 
 function TheoryKey(props) {

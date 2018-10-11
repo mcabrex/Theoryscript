@@ -2,9 +2,10 @@
   background-color: black;
   color: #fdfcf4; }
 
+.functions {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: 5; }
+
 .function {
-  margin-left: 3vw; }
-  .function-name {
-    display: inline-block;
-    text-align: center;
-    padding: 1.5vh; }
+  display: grid; }

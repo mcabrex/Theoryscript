@@ -3,6 +3,12 @@
     color: rgb(253, 252, 244);
 }
 
+%center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin dimensions($width,$height,$padding){
     width: $width;
     height: $height;

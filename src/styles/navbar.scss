@@ -2,10 +2,8 @@
 
 .navbar {
     background-color: rgb(0, 0, 0);
-    height: 10vh;
     &-text {
-        width: 100vw;
-        text-align: center;
+        width: 100%;
         &-link {
             color: rgb(250, 248, 226);
             &:hover {

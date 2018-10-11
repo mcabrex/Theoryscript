@@ -1,24 +1,27 @@
 import React, { Component } from "react";
 import { scaleBuilder } from "../builders/";
 import { TheoryKey, TheoryMode } from "./index";
+import { TheoryContext } from "../../contexts/TheoryContext";
 
 export default class TheoryPage extends Component {
   render() {
     let props = this.props;
     return (
       <div className="theory">
-        <br />
         <TheoryMode className="mode" />
         <TheoryKey />
-        <br />
+        <TheoryContext.Consumer>
+          {({ key }) => <div className="key-title">Key: {key}</div>}
+        </TheoryContext.Consumer>
+
         <div
           id="carouselExampleControls"
-          className="carousel slide"
+          className="carousel slide theory-carousel"
           data-interval={false}
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className="scales d-flex align-content-stretch flex-wrap">
+              <div className="scales">
                 {scaleBuilder(props.scale)}
               </div>
             </div>

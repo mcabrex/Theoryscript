@@ -4,5 +4,8 @@
 body {
   background-color: #fdfada;
   font-family: sans-serif;
-  text-align: center;
-  height: 80vh; }
+  text-align: center; }
+
+.site {
+  display: grid;
+  grid-template-rows: 10vh 1fr; }

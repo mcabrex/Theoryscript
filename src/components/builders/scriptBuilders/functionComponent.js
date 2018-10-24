@@ -9,17 +9,16 @@ export default function functionComponent(
   let div = [];
   for (const functions in functionNames) {
     div.push(
-      <dl className="" {...props} key={functions} >
-        <dt className="function-name text-left">{functionNames[functions]}</dt>
-        <div className="col-sm-9">
-          <dd className="text-left function-description">{functionDescriptions[functions]}</dd>
-          <pre className="text-left function-string">
-            <code>{functionStrings[functions]}</code>
-          </pre>
+      <div className="function" {...props} key={functions}>
+        <div className="function-name ">{functionNames[functions]}</div>
+        <div className="function-description">
+          {functionDescriptions[functions]}
         </div>
-      </dl>
+        <pre className="text-left">
+          <code>{functionStrings[functions]}</code>
+        </pre>
+      </div>
     );
   }
   return div;
 }
-

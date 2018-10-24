@@ -1,9 +1,7 @@
 .navbar {
-  background-color: black;
-  height: 10vh; }
+  background-color: black; }
   .navbar-text {
-    width: 100vw;
-    text-align: center; }
+    width: 100%; }
     .navbar-text-link {
       color: #faf8e2; }
       .navbar-text-link:hover {

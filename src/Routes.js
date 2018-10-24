@@ -4,7 +4,7 @@ import { Script, Theory } from "./components";
 
 const Routes = () => {
   return (
-    <div>
+    <div className="content">
       <Route exact path="/" component={Theory} />
       <Route path="/script" component={Script} />
     </div>

@@ -2,15 +2,15 @@
   background-color: black;
   color: #fdfcf4; }
 
-.scales {
-  margin: 0 auto;
+.scales-note {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center; }
+
+.scales {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(8, 12.5%);
   text-align: center;
-  position: relative;
-  width: 90vw; }
-  .scales-note {
-    width: 10vw;
-    margin: 2.5vh 0; }
+  height: 10vh; }

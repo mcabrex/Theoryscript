@@ -4,7 +4,7 @@ export default function keyDropDown(keys, key, handleKey) {
   let div = [];
   for (let i = 0; i < keys.length; i++) {
     let currentKey = keys[i];
-    let keyClass = currentKey === key[0] ? "key-pressed" : "key"
+    let keyClass = currentKey === key[0] ? "key-button-pressed" : "key-button"
       div.push(
         <button
           onClick={handleKey}

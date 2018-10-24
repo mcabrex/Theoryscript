@@ -1,17 +1,15 @@
 @import '../../mixins';
 
 .scales {
-    margin: 0 auto;
     @extend %title-block;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, percentage(1/8));
     text-align: center;
-    position: relative;
-    width: 90vw;
+    // width: 90vw;
+    height: 10vh;
     &-note {
-        width: 80vw * (1/8);
-        margin: 2.5vh 0;
+        @extend %center-child;
     }
 }

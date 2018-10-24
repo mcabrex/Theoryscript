@@ -4,5 +4,11 @@
 @import './accidental.scss';
 
 .theory {
-    height: 90vh;
+    display: grid;
+    grid-template-rows: 5vh 10vh 5vh 5vh 40vh 10vh;
+    &-carousel {
+        @extend %title-block;
+        height: 100%;
+        grid-row-start: 6;
+    }
 }

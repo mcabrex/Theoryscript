@@ -7,23 +7,16 @@ function TheoryKey(props) {
   return (
     <TheoryContext.Consumer>
       {({ key, keys, handleKey, handleAccidental }) => {
-        let accidentalClassFlat = key[1] === "♭" ? "btn accidental-pressed" : "btn accidental"
-        let accidentalClassSharp = key[1] === "♯" ? "btn accidental-pressed" : "btn accidental"
+        let accidentalClassFlat =
+          key[1] === "♭" ? "key-accidental-button-pressed" : "key-accidental-button";
+        let accidentalClassSharp =
+          key[1] === "♯" ? "key-accidental-button-pressed" : "key-accidental-button";
         return (
-          <div {...props} className="">
-            <div
-              className="btn-group"
-              role="group"
-              aria-label="Basic example"
-            >
-              {keyDropDown(keys,key,handleKey)}
+          <div {...props} className="key">
+            <div className="key-buttons" aria-label="Basic example">
+              {keyDropDown(keys, key, handleKey)}
             </div>
-            <div
-              onClick={handleAccidental}
-              className="btn-group"
-              role="group"
-              aria-label="Basic example"
-            >
+            <div onClick={handleAccidental} className="key-accidental-buttons" aria-label="Basic example">
               <button id="♭" type="button" className={accidentalClassFlat}>
                 {"♭"}
               </button>
@@ -31,12 +24,9 @@ function TheoryKey(props) {
                 {"♯"}
               </button>
             </div>
-            <br />
-            <div className="key-title">Key: {key}</div>
           </div>
-        )
-      }
-    }
+        );
+      }}
     </TheoryContext.Consumer>
   );
 }

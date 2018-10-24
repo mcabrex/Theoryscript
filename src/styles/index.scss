@@ -6,5 +6,9 @@ body {
     background-color: rgb(253, 250, 218);
     font-family: sans-serif;
     text-align: center;
-    height: 80vh;
+}
+
+.site {
+    display: grid;
+    grid-template-rows: 10vh 1fr;
 }

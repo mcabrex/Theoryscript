@@ -2,21 +2,34 @@
   background-color: black;
   color: #fdfcf4; }
 
+.script-language {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.functions {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: 5; }
+
 .function {
-  margin-left: 3vw; }
-  .function-name {
-    display: inline-block;
-    text-align: center;
-    padding: 1.5vh; }
+  display: grid; }
 
 .function-name, .script-language {
   background-color: black;
   color: #fdfcf4; }
 
+.script-language {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .script {
-  height: 100%; }
+  display: grid;
+  height: 100%;
+  grid-template-rows: 5vh 8vh 5vh 1fr;
+  grid-template-columns: 10vw 10vw 58vw 10vw 10vw;
+  width: 100%; }
   .script-language {
-    margin: 2vh;
-    display: inline-block;
-    text-align: center;
-    padding: 1.5vh; }
+    grid-row-start: 2;
+    grid-column-start: 3; }

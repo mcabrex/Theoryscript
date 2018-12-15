@@ -37,28 +37,27 @@
   }
 
   &-accidental {
-      &-buttons {
-          display: grid;
-          grid-row-start: 2;
-          grid-column-start: 2;
-          grid-template-columns: 50% 50%;
-          grid-template-rows: 80% 20%;
+    &-buttons {
+      display: grid;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 80% 20%;
+    }
+    &-button {
+      background-color: rgba(0, 0, 0, 0);
+      border-style: none;
+      &-pressed {
+        background-color: black;
+        color: white;
+        border-style: none;
       }
-      &-button {
-          background-color: rgba(0, 0, 0, 0);
-          border-style: none;
-        &-pressed {
-          background-color: black;
-          color: white;
-          border-style: none;
-        }
-        &:hover {
-          background-color: black;
-          color: white;
-        }
+      &:hover {
+        background-color: black;
+        color: white;
       }
+    }
   }
-
 
   &-title {
     grid-row-start: 4;

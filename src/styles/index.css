@@ -8,4 +8,5 @@ body {
 
 .site {
   display: grid;
-  grid-template-rows: 10vh 1fr; }
+  grid-template-rows: 15vh 1fr;
+  width: 100vw; }
